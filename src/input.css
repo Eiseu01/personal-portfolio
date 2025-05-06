@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Russo+One&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-main-color: #0c1222;
+  --color-border-color: #021827;
+  --color-input-color: #404961;
+  --color-hover-color: #351b7d;
+}
+
+html {
+  font-family: "Inter";
+  scroll-behavior: smooth !important;
+  @apply text-white;
+}
+
+ul li {
+  @apply text-main-color inline rounded-sm bg-white px-2 text-xs md:text-base;
+}
+
+.important {
+  font-family: "Russo One";
+  @apply text-white;
+}
+
+h3 span {
+  @apply font-medium md:font-bold;
+}
+
+.sendMessage input[type="text"],
+input[type="email"],
+textarea {
+  @apply bg-input-color rounded-sm border border-white p-2 placeholder-gray-300 outline-none;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.cool {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
